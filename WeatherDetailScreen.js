@@ -44,15 +44,15 @@ export default class WeatherDetailScreen extends React.Component {
     }
     let celsius = this.state.main.temp - 273.15;
     let humidity = this.state.main.humidity;
-    var w = this.state.weather[0].icon + "";
-    src = './assets/' + w + "png";
+    const w = this.state.weather[0].icon;
+
     if(w =='01d' || w== '01n'){
       return (
         <View style={styles.container}>
         <Text style={styles.content}>온도: {celsius.toFixed(1)}</Text>
         <Text style={styles.content}>습도: {humidity+"%"}</Text>
-        <Image style={{width:'40%', height:'40%', resizeMode:'contain'}} source={require('./assets/02d.png')} />
-        <Text style={styles.comment}>태양아 저 나그네의 옷을 벗겨라</Text>
+        <Image style={{width:'40%', height:'40%', resizeMode:'contain'}} source={require('./assets/01d.png')} />
+        <Text style={styles.comment}>태양아 저 나그네의 옷을 벗겨라.</Text>
         </View>
       );
     }else if(w =='02d' || w== '02n'){
@@ -70,7 +70,7 @@ export default class WeatherDetailScreen extends React.Component {
         <Text style={styles.content}>온도: {celsius.toFixed(1)}</Text>
         <Text style={styles.content}>습도: {humidity+"%"}</Text>
         <Image style={styles.imageSetting} source={require('./assets/03d.png')} />
-        <Text style={styles.comment}>우산 챙기면 비 안옵니다,</Text>
+        <Text style={styles.comment}>우산 챙기면 비 안옵니다.</Text>
         </View>
       );
     }else if(w=='04d' || w=='04n'){
@@ -88,7 +88,7 @@ export default class WeatherDetailScreen extends React.Component {
         <Text style={styles.content}>온도: {celsius.toFixed(1)}</Text>
         <Text style={styles.content}>습도: {humidity+"%"}</Text>
         <Image style={styles.imageSetting} source={require('./assets/09d.png')} />
-        <Text style={styles.comment}>미세먼지를 쓸어갈 달콤한 빗물이네요</Text>
+        <Text style={styles.comment}>미세먼지를 쓸어갈 달콤한 빗물이네요.</Text>
         </View>
       );
     }
@@ -98,7 +98,7 @@ export default class WeatherDetailScreen extends React.Component {
         <Text style={styles.content}>온도: {celsius.toFixed(1)}</Text>
         <Text style={styles.content}>습도: {humidity+"%"}</Text>
         <Image style={styles.imageSetting} source={require('./assets/10d.png')} />
-        <Text style={styles.comment}>여우비</Text>
+        <Text style={styles.comment}>여우비.</Text>
         </View>
       );
     }
@@ -108,7 +108,7 @@ export default class WeatherDetailScreen extends React.Component {
         <Text style={styles.content}>온도: {celsius.toFixed(1)}</Text>
         <Text style={styles.content}>습도: {humidity+"%"}</Text>
         <Image style={styles.imageSetting} source={require('./assets/11d.png')} />
-        <Text style={styles.comment}>토르가 옵니다</Text>
+        <Text style={styles.comment}>토르가 옵니다.</Text>
         </View>
       );
     }
@@ -128,8 +128,8 @@ export default class WeatherDetailScreen extends React.Component {
         <Text style={styles.content}>온도: {celsius.toFixed(1)}</Text>
         <Text style={styles.content}>습도: {humidity+"%"}</Text>
         <Image style={styles.imageSetting} source={require('./assets/01d.png') } />
-        <Text style={styles.comment}>가끔은 모르고 나가도 좋은 날이 있어요</Text>
-        <Text style={styles.comment}>아마 쨍쨍할거에요</Text>
+        <Text style={styles.comment}>가끔은 모르고 나가도 좋은 날이 있어요.</Text>
+        <Text style={styles.comment}>아마 쨍쨍할거에요.</Text>
         </View>
       );
     }
